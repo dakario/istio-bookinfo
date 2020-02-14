@@ -1,0 +1,35 @@
+server:
+  port: ${SERVER_PORT:8080}    #default port where the service will be started
+spring:
+  application:
+    name: productpage   #current service name to be used by the eureka server
+  session:
+    store-type: jdbc
+    # Database schema initialization mode.
+    jdbc:
+      initialize-schema: always
+      # Path to the SQL file to use to initialize the database schema.
+      schema: classpath:org/springframework/session/jdbc/schema-@@platform@@.sql
+      # Name of the database table used to store sessions.
+      table-name: SPRING_SESSION
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:file:~/testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform:
+      org:
+        hibernate:
+          dialect: H2Dialect
+
+
+detailsHostname: ${DETAILS_HOST:#{'http://localhost:8084'}}
+ratingsHostname: ${RATINGS_HOST:#{'http://localhost:8085'}}
+reviewsHostname: ${REVIEWS_HOST:#{'http://localhost:8081'}}

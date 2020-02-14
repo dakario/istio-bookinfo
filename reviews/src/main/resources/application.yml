@@ -1,0 +1,11 @@
+server:
+  port: ${SERVER_PORT:8081}    #default port where the service will be started
+spring:
+  application:
+    name: reviews   #current service name to be used by the eureka server
+
+enable_ratings: ${ENABLE_RATINGS:true}
+star_color: ${STAR_COLOR:black}
+
+ratingsHostname: ${RATINGS_HOST:#{'http://localhost:8085'}}
+
