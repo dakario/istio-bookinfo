@@ -1,13 +1,13 @@
 FROM node:10
 
-ENV PORT 8085
+ENV PORT 8080
 WORKDIR /usr/src/app
 
 COPY package.json ./
 
 RUN npm install
 
-COPY . .
+COPY server.js ./
 
-EXPOSE EXPOSE ${SERVER_PORT}
+EXPOSE ${PORT}
 CMD [ "node", "server.js" ]

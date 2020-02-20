@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine as build
 WORKDIR /workspace/app
-ENV SERVER_PORT 8081
-ENV ENABLE_RATINGS false
+ENV SERVER_PORT 8080
+ENV ENABLE_RATINGS true
 ENV STAR_COLOR black
 
 
