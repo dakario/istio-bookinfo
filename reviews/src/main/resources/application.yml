@@ -1,5 +1,5 @@
 server:
-  port: ${SERVER_PORT:8081}    #default port where the service will be started
+  port: ${SERVER_PORT:8080}    #default port where the service will be started
 spring:
   application:
     name: reviews   #current service name to be used by the eureka server
