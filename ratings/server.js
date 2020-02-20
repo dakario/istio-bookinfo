@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-const port = (process.env.PORT === undefined)? 8085 : process.env.PORT;
+const port = (process.env.PORT === undefined)? 8080 : process.env.PORT;
 
 const ratings = [
     {
